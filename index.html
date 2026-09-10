@@ -29,12 +29,10 @@
 }
 
 :root{
-
     --verde:#006B45;
     --verde-escuro:#004F35;
     --verde-claro:#8CC63F;
     --branco:#FFFFFF;
-
 }
 
 html{
@@ -42,15 +40,10 @@ html{
 }
 
 body{
-
     font-family:'Poppins', sans-serif;
-
     background:#FFFFFF;
-
     color:#333333;
-
     overflow-x:hidden;
-
 }
 
 
@@ -59,9 +52,7 @@ body{
 ===================================================== */
 
 .abertura{
-
     position:fixed;
-
     inset:0;
 
     width:100%;
@@ -70,9 +61,7 @@ body{
     background:#FFFFFF;
 
     display:flex;
-
     justify-content:center;
-
     align-items:center;
 
     z-index:9999;
@@ -82,17 +71,12 @@ body{
     transition:
         opacity .8s ease,
         visibility .8s ease;
-
 }
 
 .abertura.ocultar{
-
     opacity:0;
-
     visibility:hidden;
-
     pointer-events:none;
-
 }
 
 
@@ -101,13 +85,10 @@ body{
 ===================================================== */
 
 .cartao{
-
     position:relative;
 
     width:90%;
-
     max-width:650px;
-
     min-height:500px;
 
     background:
@@ -123,11 +104,8 @@ body{
     padding:55px 45px;
 
     display:flex;
-
     flex-direction:column;
-
     justify-content:center;
-
     align-items:center;
 
     text-align:center;
@@ -136,14 +114,14 @@ body{
 
     box-shadow:
         0 25px 60px rgba(0,107,69,.25);
-
 }
 
 
-/* CÍRCULOS DECORATIVOS */
+/* =====================================================
+   ELEMENTOS DECORATIVOS
+===================================================== */
 
 .cartao::before{
-
     content:"";
 
     position:absolute;
@@ -157,11 +135,9 @@ body{
 
     top:-130px;
     right:-100px;
-
 }
 
 .cartao::after{
-
     content:"";
 
     position:absolute;
@@ -175,7 +151,6 @@ body{
 
     bottom:-100px;
     left:-90px;
-
 }
 
 
@@ -184,9 +159,7 @@ body{
 ===================================================== */
 
 .logo-box{
-
     position:relative;
-
     z-index:2;
 
     background:#FFFFFF;
@@ -199,19 +172,14 @@ body{
 
     box-shadow:
         0 8px 25px rgba(0,0,0,.10);
-
 }
 
 .logo-box img{
-
     width:210px;
-
     max-width:100%;
-
     height:auto;
 
     display:block;
-
 }
 
 
@@ -220,21 +188,17 @@ body{
 ===================================================== */
 
 .marca{
-
     position:relative;
-
     z-index:2;
 
     color:#FFFFFF;
 
     font-size:14px;
-
     font-weight:600;
 
     letter-spacing:3px;
 
     margin-bottom:18px;
-
 }
 
 
@@ -243,15 +207,12 @@ body{
 ===================================================== */
 
 .cartao h1{
-
     position:relative;
-
     z-index:2;
 
     color:#FFFFFF;
 
     font-size:34px;
-
     line-height:1.2;
 
     font-weight:800;
@@ -259,7 +220,6 @@ body{
     max-width:520px;
 
     margin-bottom:22px;
-
 }
 
 
@@ -268,19 +228,15 @@ body{
 ===================================================== */
 
 .cartao p{
-
     position:relative;
-
     z-index:2;
 
     color:rgba(255,255,255,.85);
 
     font-size:15px;
-
     font-weight:400;
 
     margin-bottom:30px;
-
 }
 
 
@@ -289,15 +245,12 @@ body{
 ===================================================== */
 
 .botao-abrir{
-
     position:relative;
-
     z-index:2;
 
     display:inline-flex;
 
     align-items:center;
-
     justify-content:center;
 
     padding:15px 32px;
@@ -320,16 +273,13 @@ body{
     transition:
         transform .3s ease,
         box-shadow .3s ease;
-
 }
 
 .cartao:hover .botao-abrir{
-
     transform:translateY(-3px);
 
     box-shadow:
         0 14px 30px rgba(0,0,0,.20);
-
 }
 
 
@@ -338,7 +288,6 @@ body{
 ===================================================== */
 
 .container{
-
     width:100%;
 
     min-height:100vh;
@@ -348,43 +297,33 @@ body{
     background:#FFFFFF;
 
     animation:aparecer .8s ease;
-
 }
 
 .container.mostrar{
-
     display:block;
-
 }
 
 
 @keyframes aparecer{
 
     from{
-
         opacity:0;
-
         transform:translateY(20px);
-
     }
 
     to{
-
         opacity:1;
-
         transform:translateY(0);
-
     }
 
 }
 
 
 /* =====================================================
-   CONVITE
+   ÁREA DO CONVITE
 ===================================================== */
 
 .convite{
-
     width:100%;
 
     max-width:1200px;
@@ -394,12 +333,11 @@ body{
     background:#FFFFFF;
 
     padding:30px 15px 15px;
-
 }
 
 
 /* =====================================================
-   IMAGEM PRINCIPAL DO SIPAT
+   MOLDURA DA IMAGEM
 ===================================================== */
 
 .imagem-container{
@@ -423,15 +361,22 @@ body{
     box-shadow:
         0 12px 35px
         rgba(0,107,69,.20);
-
 }
 
 
 /* =====================================================
-   IMAGEM
+   PICTURE
+   DESKTOP = sipat.jpeg
+   CELULAR = sipat2.jpeg
 ===================================================== */
 
-.imagem-container img{
+.imagem-container picture{
+    display:block;
+
+    width:100%;
+}
+
+.imagem-container picture img{
 
     width:100%;
 
@@ -449,7 +394,7 @@ body{
 
 
 /* =====================================================
-   ÁREA DOS BOTÕES
+   BOTÕES
 ===================================================== */
 
 .acoes{
@@ -467,20 +412,14 @@ body{
     flex-wrap:wrap;
 
     margin:0 auto 35px;
-
 }
 
-
-/* =====================================================
-   BOTÕES
-===================================================== */
 
 .botao{
 
     display:inline-flex;
 
     align-items:center;
-
     justify-content:center;
 
     min-width:230px;
@@ -501,7 +440,6 @@ body{
         transform .3s ease,
         box-shadow .3s ease,
         background .3s ease;
-
 }
 
 
@@ -517,7 +455,6 @@ body{
 
     box-shadow:
         0 8px 20px rgba(0,107,69,.20);
-
 }
 
 .botao-confirmar:hover{
@@ -528,7 +465,6 @@ body{
 
     box-shadow:
         0 12px 25px rgba(0,107,69,.28);
-
 }
 
 
@@ -543,7 +479,6 @@ body{
     color:var(--verde);
 
     border:2px solid var(--verde);
-
 }
 
 .botao-localizacao:hover{
@@ -553,7 +488,6 @@ body{
     color:#FFFFFF;
 
     transform:translateY(-3px);
-
 }
 
 
@@ -576,12 +510,11 @@ footer{
     font-weight:500;
 
     letter-spacing:1px;
-
 }
 
 
 /* =====================================================
-   RESPONSIVIDADE
+   TABLET
 ===================================================== */
 
 @media(max-width:900px){
@@ -593,7 +526,6 @@ footer{
         padding:
             20px 12px
             10px;
-
     }
 
     .imagem-container{
@@ -607,13 +539,11 @@ footer{
         padding:6px;
 
         border-radius:22px;
-
     }
 
-    .imagem-container img{
+    .imagem-container picture img{
 
         border-radius:16px;
-
     }
 
 }
@@ -635,8 +565,10 @@ footer{
             40px 25px;
 
         border-radius:28px;
-
     }
+
+
+    /* LOGO */
 
     .logo-box{
 
@@ -644,38 +576,45 @@ footer{
             14px 20px;
 
         margin-bottom:25px;
-
     }
 
     .logo-box img{
 
         width:170px;
-
     }
+
+
+    /* MARCA */
 
     .marca{
 
         font-size:11px;
 
         letter-spacing:2px;
-
     }
+
+
+    /* TÍTULO */
 
     .cartao h1{
 
         font-size:25px;
 
         max-width:100%;
-
     }
+
+
+    /* TEXTO */
 
     .cartao p{
 
         font-size:13px;
 
         margin-bottom:25px;
-
     }
+
+
+    /* BOTÃO ABRIR */
 
     .botao-abrir{
 
@@ -683,21 +622,24 @@ footer{
             13px 25px;
 
         font-size:12px;
-
     }
 
 
-    /* IMAGEM */
+    /* =================================================
+       CONVITE MOBILE
+    ================================================= */
 
     .convite{
 
         padding:
             15px 8px
             5px;
-
     }
 
+
     .imagem-container{
+
+        width:100%;
 
         margin:
             15px auto
@@ -706,17 +648,20 @@ footer{
         padding:5px;
 
         border-radius:18px;
-
     }
 
-    .imagem-container img{
+
+    .imagem-container picture img{
+
+        width:100%;
 
         border-radius:13px;
-
     }
 
 
-    /* BOTÕES */
+    /* =================================================
+       BOTÕES MOBILE
+    ================================================= */
 
     .acoes{
 
@@ -726,8 +671,8 @@ footer{
 
         padding:
             0 10px;
-
     }
+
 
     .botao{
 
@@ -737,8 +682,10 @@ footer{
 
         padding:
             14px 20px;
-
     }
+
+
+    /* RODAPÉ */
 
     footer{
 
@@ -747,7 +694,6 @@ footer{
             25px;
 
         font-size:9px;
-
     }
 
 }
@@ -833,15 +779,41 @@ footer{
 
 
         <!-- =================================================
-             IMAGEM PRINCIPAL
+             IMAGEM DO CONVITE
+
+             COMPUTADOR:
+             sipat.jpeg
+
+             CELULAR:
+             sipat2.jpeg
         ================================================== -->
 
         <div class="imagem-container">
 
-            <img
-                src="sipat.jpeg"
-                alt="Convite SIPAT 2026 - BAPLAN"
-            >
+            <picture>
+
+                <!--
+                    Até 600px:
+                    carrega a versão vertical
+                -->
+
+                <source
+                    media="(max-width: 600px)"
+                    srcset="sipat2.jpeg"
+                >
+
+
+                <!--
+                    Notebook/Desktop:
+                    carrega a versão normal
+                -->
+
+                <img
+                    src="sipat.jpeg"
+                    alt="Convite SIPAT 2026 - BAPLAN"
+                >
+
+            </picture>
 
         </div>
 
@@ -854,7 +826,9 @@ footer{
         <div class="acoes">
 
 
-            <!-- CONFIRMAR PRESENÇA -->
+            <!-- =================================================
+                 CONFIRMAR PRESENÇA
+            ================================================== -->
 
             <a
                 href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=ppSfgHcEkEO4buqxTFSTp5YfKd-sYj5EqZVxfFmNMbZUNFUyMVZMNElYTTQwTEM3MTFGNE4yU1pYTC4u"
@@ -869,7 +843,9 @@ footer{
 
 
 
-            <!-- VER LOCALIZAÇÃO -->
+            <!-- =================================================
+                 LOCALIZAÇÃO
+            ================================================== -->
 
             <a
                 href="https://www.google.com/maps/search/?api=1&query=VIBRA+ENERGIA+BAPLAN"
